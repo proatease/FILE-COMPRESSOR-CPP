@@ -24,10 +24,11 @@ public:
             // nodes of linked list type to store lowest freq datas to make node for tree
 
             Linkedlist *linkedlistnode_first = new Linkedlist;
-            linkedlistnode_first = head->getfirst();
+            linkedlistnode_first=head->getfirst();
+
 
             Linkedlist *linkedlistnode_second = new Linkedlist;
-            linkedlistnode_second = head->getfirst();
+            linkedlistnode_second= head->getfirst();
 
             // nodes of tree type
 
@@ -54,29 +55,18 @@ public:
             // making new node of linked list type to add in linked list with new freq.
 
             Linkedlist *newlinkedlist_formed = new Linkedlist(newnode->info, newnode->freq);
-            newlinkedlist_formed->add(newnode->info, newnode->freq);
+            newlinkedlist_formed->add(newnode->info,newnode->freq);
             head->sort();
-
-
-
             cout << "Combining nodes: "
                  << linkedlistnode_first->getInfo() << "(" << linkedlistnode_first->getFreq() << ") and "
                  << linkedlistnode_second->getInfo() << "(" << linkedlistnode_second->getFreq() << ")" << endl;
 
             cout << "New node created with frequency: " << newnode->freq << endl;
-
-
-
-
-            delete linkedlistnode_first;
-            delete linkedlistnode_second;
-            delete newlinkedlist_formed;
-
-
-
-            head->dis();
             
+            head->dis();
+            cout << "hello" << endl;
         }
+       
         return new TREE(head->getInfo(), head->getFreq());
     }
 
@@ -98,17 +88,20 @@ public:
 int main()
 {
     Linkedlist l1;
-  
     TREE t1;
     readfromfile(l1);
 
+    
+
     Linkedlist *head = l1.gethead();
 
-    TREE *root = new TREE; 
     
-    root = t1.Huffman_tree_creator(head);
 
-    t1.displaytree(root, "");
+    TREE *root = t1.Huffman_tree_creator(head);
+
+    
+
+   t1.displaytree(root, "");
 
     return 0;
 }
