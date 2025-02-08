@@ -1,5 +1,5 @@
 File Compression Project using Huffman Encoding
-Hey there! 👋 This is my File Compression project where I’ve implemented a Huffman Encoding Algorithm to compress and decompress files in C++. The goal was to take a file (like a text file), compress it to a smaller size using a lossless compression technique, and then decompress it back to its original form when needed.
+This is my File Compression project where I’ve implemented a Huffman Encoding Algorithm to compress and decompress files in C++. The goal was to take a file (like a text file), compress it to a smaller size using a lossless compression technique, and then decompress it back to its original form when needed.
 
 Features:
 Compress Files: The program reads a file, figures out how often each character shows up, and uses that information to build a Huffman tree. The characters are then compressed and saved as a .zip file.
@@ -44,3 +44,6 @@ If you have a .zip file that you want to decompress, you can run the program, an
 Requirements:
 C++ Compiler (like GCC or MSVC)
 Standard C++ libraries (no external dependencies)
+
+
+
